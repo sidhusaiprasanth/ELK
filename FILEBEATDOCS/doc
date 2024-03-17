@@ -1,0 +1,15 @@
+# Keystore
+
+filebeat keystore create
+filebeat keystore add ES_PWD
+filebeat keystore add ES_PWD --force
+cat /file/containing/setting/value | filebeat keystore add ES_PWD --stdin --force
+filebeat keystore list
+filebeat keystore remove ES_PWD
+
+
+
+If you're using Docker, the stdout from each container are stored in /var/lib/docker/containers. But Kubernetes also creates a directory structure to help you find logs based on Pods, so you can find the container logs for each Pod running on a node at
+
+
+/var/log/pods/<namespace>_<pod_name>_<pod_id>/<container_name>/.

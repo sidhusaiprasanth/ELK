@@ -1,0 +1,10 @@
+elasticsearch
+
+./elasticsearch-users useradd sidhu -p Prudhvi@8340 -r superuser
+
+curl --cacert certs/http_ca.crt -u sidhu:Prudhvi@8340 https://localhost:9200
+
+https://localhost:9200/_cluster/state?pretty
+
+
+
